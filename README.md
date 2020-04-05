@@ -1,4 +1,4 @@
-Project developed as practice to work with React & Redux by Make It Real [Youtube Course](https://www.youtube.com/playlist?list=PLxyfMWnjW2kuyePV1Gzn5W_gr3BGIZq8G)
+## Project developed as practice to work with React & Redux by Make It Real [Youtube Course](https://www.youtube.com/playlist?list=PLxyfMWnjW2kuyePV1Gzn5W_gr3BGIZq8G)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
