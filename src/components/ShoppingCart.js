@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Table, Button } from 'react-bootstrap';
 import { FaTrashAlt } from 'react-icons/fa';
+import store from '../store';
 
 const styles = {
   footer: {
@@ -16,10 +17,19 @@ class ShoppingCart extends Component {
     this.state = {
       cart: [],
     };
+
+    store.subscribe(() => {
+      this.setState({
+        cart: store.getState().cart,
+      });
+    });
   }
 
   removeFromCart = (product) => {
-    console.log(product);
+    store.dispatch({
+      type: 'REMOVE_FROM_CART',
+      product
+    });
   }
 
   render() {
@@ -36,7 +46,7 @@ class ShoppingCart extends Component {
                   {product.price}
                 </td>
                 <td className="text-right">
-                  <Button bsSize="xsmall" bsStyle="danger" onClick={() => this.removeFromCart(product)}>
+                  <Button size="sm" variant="danger" onClick={() => this.removeFromCart(product)}>
                     <FaTrashAlt />
                   </Button>
                 </td>

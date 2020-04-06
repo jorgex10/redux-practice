@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CardDeck, Card, Button } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
+import store from '../store';
 
 class ProductList extends Component {
   constructor() {
@@ -23,7 +24,10 @@ class ProductList extends Component {
   }
 
   addToCart = (product) => {
-    console.log(product);
+    store.dispatch({
+      type: 'ADD_TO_CART',
+      product
+    });
   }
 
   render() {
@@ -35,8 +39,7 @@ class ProductList extends Component {
             <Card.Body>
               <Card.Title>{product.name}</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                Some quick example text to build on the card title.
               </Card.Text>
               <Button variant="primary" onClick={() => this.addToCart(product)} role="button" disabled={product.inventory <= 0}>
                 $
