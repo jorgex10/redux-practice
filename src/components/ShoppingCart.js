@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Table, Button } from 'react-bootstrap';
 import { FaTrashAlt } from 'react-icons/fa';
 import store from '../store';
+import { removeFromCart } from '../actionCreators';
 
 const styles = {
   footer: {
@@ -26,10 +27,7 @@ class ShoppingCart extends Component {
   }
 
   removeFromCart = (product) => {
-    store.dispatch({
-      type: 'REMOVE_FROM_CART',
-      product
-    });
+    store.dispatch(removeFromCart(product));
   }
 
   render() {

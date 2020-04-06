@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { CardDeck, Card, Button } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
 import store from '../store';
+import { addToCart } from '../actionCreators';
 
 class ProductList extends Component {
   constructor() {
@@ -24,10 +25,7 @@ class ProductList extends Component {
   }
 
   addToCart = (product) => {
-    store.dispatch({
-      type: 'ADD_TO_CART',
-      product
-    });
+    store.dispatch(addToCart(product));
   }
 
   render() {
