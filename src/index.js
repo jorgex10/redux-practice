@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
 import { Provider } from 'react-redux';
 import store from './store';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { replaceProducts } from './actions/productsActions';
+
+import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { replaceProducts } from './actionCreators';
 
 store.dispatch(replaceProducts());
 

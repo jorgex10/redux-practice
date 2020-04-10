@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Table, Button } from 'react-bootstrap';
 import { FaTrashAlt } from 'react-icons/fa';
 import { connect } from 'react-redux';
-import { removeFromCart } from '../actionCreators';
+import { removeFromCart } from '../actions/cartActions';
 
 const styles = {
   footer: {

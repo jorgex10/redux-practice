@@ -2,7 +2,7 @@ import React from 'react';
 import { CardDeck, Card, Button } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
 import { connect } from 'react-redux';
-import { addToCart } from '../actionCreators';
+import { addToCart } from '../actions/cartActions';
 
 const ProductList = ({ products, addToCart }) => (
   <CardDeck>

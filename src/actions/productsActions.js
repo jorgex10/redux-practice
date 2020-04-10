@@ -7,14 +7,4 @@ const replaceProducts = () => (dispatch) => axios.get('http://localhost:3001/pro
   });
 });
 
-const addToCart = (product) => ({
-  type: 'ADD_TO_CART',
-  product,
-});
-
-const removeFromCart = (product) => ({
-  type: 'REMOVE_FROM_CART',
-  product,
-});
-
-export { replaceProducts, addToCart, removeFromCart };
+export { replaceProducts };
